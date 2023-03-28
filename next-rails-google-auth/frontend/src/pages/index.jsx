@@ -25,7 +25,7 @@ export default function Home() {
               <Logout />
             </div>
             <div>
-            <DeleteUser />
+              <DeleteUser />
             </div>
           </div>
         ) : (

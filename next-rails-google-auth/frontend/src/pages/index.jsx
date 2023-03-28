@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useSession } from 'next-auth/react'
 import Login from '@/components/Login'
 import Logout from '@/components/logout'
-// import DeleteUser from '@/components/deleteUser'
+import DeleteUser from '@/components/deleteUser'
 
 export default function Home() {
   const { data: session, status } = useSession()
@@ -24,9 +24,9 @@ export default function Home() {
             <div>
               <Logout />
             </div>
-            {/* <div> */}
-            {/* <DeleteUser /> */}
-            {/* </div> */}
+            <div>
+            <DeleteUser />
+            </div>
           </div>
         ) : (
           <Login />

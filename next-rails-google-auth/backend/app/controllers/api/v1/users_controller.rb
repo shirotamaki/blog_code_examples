@@ -7,7 +7,7 @@ module Api
         user = User.find_or_create_by(provider: params[:provider], uid: params[:uid], name: params[:name],
                                       email: params[:email])
         if user.save
-          redirect_to 'http://localhost:4000/'
+          head :ok
         else
           render json: { error: 'ログインに失敗しました' }, status: :unprocessable_entity
         end
